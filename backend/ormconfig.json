@@ -1,0 +1,23 @@
+{
+  "type": "postgres",
+  "host": "127.0.0.1",
+  "port": 5432,
+  "username": "postgres",
+  "password": "mysecretpassword",
+  "database": "my_database",
+  "migrationsTableName": "migration",
+  "synchronize": false,
+  "entities": [
+    "dist/entities/**/*{.js,.ts}"
+  ],
+  "migrations": [
+    "dist/migrations/**/*{.js,.ts}"
+  ],
+  "subscribers": [
+    "dist/subscribers/**/*{.js,.ts}"
+  ],
+  "cli": {
+    "migrationsDir": "src/migration"
+  },
+  "ssl": false
+}

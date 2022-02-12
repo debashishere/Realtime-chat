@@ -15,7 +15,10 @@ echo "echo stop & remove old docker [$SERVER] and starting new fresh instance of
 
 # wait for pg to start
 echo "sleep wait for pg-server [$SERVER] to start";
-SLEEP 3;
+sleep 1m;
+
+# log postgress running process
+ps -ef | grep postgres
 
 # create the db 
 echo "CREATE DATABASE $DB ENCODING 'UTF-8';" | docker exec -i $SERVER psql -U postgres
