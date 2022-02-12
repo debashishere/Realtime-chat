@@ -24,12 +24,7 @@ Dev steeps :-
 4. Install dependencies
    run: npm install
 
-5. Install websockets dependencies
-   run:-
-   npm install
+5. Generate a new Websocker Resource
+   run: nest g resource chat
 
-   - @nestjs/websockets
-   - @nestjs/platform-socket.io
-   - @types/socket.io
-
-6. Create a Gate way to receive and send messages
+6. Restructure project with tests
