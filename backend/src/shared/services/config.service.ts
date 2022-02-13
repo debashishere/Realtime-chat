@@ -32,7 +32,6 @@ class ConfigService {
   public getTypeOrmConfig(): TypeOrmModuleOptions {
     return {
       type: 'postgres',
-
       host: this.getValue('POSTGRES_HOST'),
       port: parseInt(this.getValue('POSTGRES_PORT')),
       username: this.getValue('POSTGRES_USER'),
@@ -40,16 +39,9 @@ class ConfigService {
       database: this.getValue('POSTGRES_DATABASE'),
 
       migrationsTableName: 'migration',
-      synchronize: false,
-      entities: ["dist/entities/**/*{.js,.ts}"],
-      migrations: ["dist/migrations/**/*{.js,.ts}"],
-      subscribers: ["dist/subscribers/**/*{.js,.ts}"],
-      // entities: ['build/src/**/*entity.{ts,js}'],
-      // migrations: ['build/db/migrations/*.{ts,js}'],
-
-      // entities: ['**/*.entity{.ts,.js}'],
-      // migrations: ['src/migration/*.ts'],
-
+      synchronize: true,
+      entities: ['**/*.entity{.ts,.js}'],
+      migrations: ['src/migration/*.ts'],
       cli: {
         migrationsDir: 'src/migration',
       },
