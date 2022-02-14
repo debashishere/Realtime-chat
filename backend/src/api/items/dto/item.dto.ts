@@ -32,12 +32,15 @@ export class ItemDTO implements Readonly<ItemDTO> {
     });
   }
 
-  public toEntity() {
+  public static toEntity(dto: Partial<ItemDTO>) {
     const it = new Item();
-    it.id = this.id;
-    it.name = this.name;
-    it.description = this.description;
+    it.id = dto.id;
+    it.name = dto.name;
+    it.image = '/image'
+    it.description = dto.description;
     it.createDateTime = new Date();
+    it.createdBy = '123';
+    it.lastChangedBy = '123'
     return it;
   }
 }

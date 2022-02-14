@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { ItemDTO } from './dto/item.dto';
 import { ItemService } from './item.service';
 
@@ -9,5 +9,10 @@ export class ItemController {
   @Get()
   public async getAll(): Promise<ItemDTO[]> {
     return await this.serv.getAll();
+  }
+
+  @Post()
+  public async post(@Body() dto: ItemDTO): Promise<ItemDTO> {
+    return this.serv.create(dto);
   }
 }
