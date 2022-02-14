@@ -49,3 +49,11 @@ Dev steeps :-
 9. Add Auto Run migration for staging/production
    Set ENV_VARIABLE to control if the migration should be auto run or not
    RUN_MIGRATIONS=<0|1>
+
+10. USER AUTHENTICATION AND AUTHORIZATION
+    a. Generate a user module
+    b. Add a custom repository by extending typeorm repository
+    c. Add CRUD operation on user
+    d. Integrate with FIREBASE AUTHENTICATION
+
+11. Add Seed Script
