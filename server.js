@@ -67,7 +67,7 @@ app.get('/', (req, res) => {
 
 
 
-const port = 3000 || process.env.PORT
+const port = 8000 || process.env.PORT
 server.listen(port), (err) => {
     if (err) {
         console.log(err)
